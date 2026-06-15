@@ -1,0 +1,13 @@
+{"_e":"root:init","_t":1780784201964,"format":"v0-jsonl","version":"56.1.13"}
+{"_e":"env:mode","_t":1780784201964,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1780784201967,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1780784202319,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1780784202666,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"metro:instantiate","_t":1780784208433,"atlas":false,"workers":14,"host":"::","port":8081}
+{"_e":"root:init","_t":1781560276868,"format":"v0-jsonl","version":"56.1.13"}
+{"_e":"env:mode","_t":1781560276869,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1781560276872,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1781560277172,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1781560277631,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"metro:instantiate","_t":1781560284920,"atlas":false,"workers":14,"host":"::","port":8081}
+{"_e":"metro:client_log","_t":1781560294086,"level":"error","data":["Project is incompatible with this version of Expo Go\n\nThis project requires a newer version of Expo Go.\n\nHow to fix this error:\nDownload the latest version of Expo Go from the Play Store."]}

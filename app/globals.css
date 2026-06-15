@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #f5f0e8;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent iOS bounce scroll */
+body {
+  overscroll-behavior: none;
+}
+
+textarea {
+  resize: none;
+}
