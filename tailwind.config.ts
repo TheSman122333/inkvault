@@ -9,11 +9,11 @@ const config: Config = {
         'paper-dark': '#ede6d6',
         ink: {
           950: '#1a1a1a',
-          800: '#2d2d2d',
-          600: '#4a4a4a',
-          400: '#a0a0a0',
-          200: '#d0ccc4',
-          100: '#e8e4dc',
+          800: '#242424',
+          600: '#3b3b3b',
+          400: '#808080',
+          200: '#a8a49d',
+          100: '#ccc8c0',
         },
       },
       fontFamily: {
