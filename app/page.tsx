@@ -64,6 +64,7 @@ export default function TodayPage() {
   const [milestone, setMilestone] = useState<{ name: string; msg: string } | null>(null);
   const [showGuide, setShowGuide] = useState(false);
   const saveTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const logContentRef = useRef('');
 
   useEffect(() => {
     if (!localStorage.getItem('iv_welcomed')) {
@@ -122,9 +123,27 @@ export default function TodayPage() {
 
   const handleLogChange = (text: string) => {
     setLogContent(text);
+    logContentRef.current = text;
     clearTimeout(saveTimer.current);
     saveTimer.current = setTimeout(() => saveLog(today, text), 600);
   };
+
+  const flushSave = useCallback(() => {
+    if (saveTimer.current === undefined) return;
+    clearTimeout(saveTimer.current);
+    saveTimer.current = undefined;
+    saveLog(today, logContentRef.current);
+  }, [today]);
+
+  useEffect(() => {
+    const onHide = () => { if (document.visibilityState === 'hidden') flushSave(); };
+    window.addEventListener('beforeunload', flushSave);
+    document.addEventListener('visibilitychange', onHide);
+    return () => {
+      window.removeEventListener('beforeunload', flushSave);
+      document.removeEventListener('visibilitychange', onHide);
+    };
+  }, [flushSave]);
 
   if (!loaded) return null;
 
@@ -167,6 +186,7 @@ export default function TodayPage() {
           className="w-full min-h-52 font-serif text-base text-ink-950 bg-transparent leading-relaxed outline-none placeholder:text-ink-200"
           value={logContent}
           onChange={e => handleLogChange(e.target.value)}
+          onBlur={flushSave}
           placeholder="Write today's entry..."
         />
       </main>
